@@ -10,9 +10,9 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/RSO-FRI-2022-2023/common</url>
+            <id>my-hosted</id>
+            <name>My Hosted server</name>
+            <url>http://130.61.221.196:8081/repository/rso/</url>
         </repository>
     </distributionManagement>
 
