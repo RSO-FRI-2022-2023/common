@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>si.fri.rsp.zddt</groupId>
+    <groupId>si.fri.rso.zddt</groupId>
     <artifactId>common</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -13,7 +13,7 @@
         <repository>
             <id>my-hosted</id>
             <name>My Hosted server</name>
-            <url>http://130.61.221.196:8081/repository/rso/</url>
+            <url>https://maven.songify.si/repository/rso/</url>
         </repository>
     </distributionManagement>
 
