@@ -20,7 +20,7 @@ import javax.persistence.*;
                         query = "SELECT c FROM Cena c WHERE c.trgovina.id = :trgovinaId"),
                 //popust
                 @NamedQuery(name = "Cena.popust",
-                query="UPDATE Cena c SET c.cena = c.cena *:factor")
+                query="UPDATE Cena c SET c.discount = c.cena * :discount")
         })
 public class Cena {
     @Id
@@ -37,6 +37,7 @@ public class Cena {
     private Trgovina trgovina;
 
     private double cena;
+    private double discount;
 
     public double getCena() {
         return cena;
