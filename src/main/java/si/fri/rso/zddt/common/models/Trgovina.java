@@ -30,6 +30,8 @@ public class Trgovina implements Serializable {
     private Integer id;
     private String ime;
     private String lokacija;
+    private double latitude;
+    private double longitude;
 
     @JsonbTransient
     @OneToMany(mappedBy = "trgovina", cascade = CascadeType.ALL)
@@ -66,5 +68,21 @@ public class Trgovina implements Serializable {
 
     public void setCene(List<Cena> cene) {
         this.cene = cene;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 }
