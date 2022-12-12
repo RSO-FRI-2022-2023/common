@@ -35,4 +35,27 @@ public class PriljubljenIzdelek {
 //    @JoinColumn(name = "user_id")
     private Uporabnik uporabnik;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Izdelek getIzdelek() {
+        return izdelek;
+    }
+
+    public void setIzdelek(Izdelek izdelek) {
+        this.izdelek = izdelek;
+    }
+
+    public Uporabnik getUporabnik() {
+        return uporabnik;
+    }
+
+    public void setUporabnik(Uporabnik uporabnik) {
+        this.uporabnik = uporabnik;
+    }
 }
