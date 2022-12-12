@@ -17,7 +17,7 @@ import javax.persistence.*;
                 @NamedQuery(name = "PriljubljenIzdelek.getIzdelekId",
                         query = "SELECT i FROM PriljubljenIzdelek i WHERE i.izdelek = :izdelekId"),
                 //vrni izdelek - naziv
-                @NamedQuery(name = "Izdelek.getByUser",
+                @NamedQuery(name = "PriljubljenIzdelek.getByUser",
                         query = "SELECT i FROM PriljubljenIzdelek i WHERE i.uporabnik.id = :uporabnikId")
         })
 public class PriljubljenIzdelek {
