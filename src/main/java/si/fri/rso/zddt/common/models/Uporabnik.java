@@ -29,9 +29,9 @@ public class Uporabnik implements Serializable {
     private String firstname;
     private String lastname;
 
-//    @JsonbTransient
-//    @OneToMany(mappedBy = "uporabnik", cascade = CascadeType.ALL)
-//    private List<PriljubljenIzdelek> priljubljeniIzdelki;
+    @JsonbTransient
+    @OneToMany(mappedBy = "uporabnik", cascade = CascadeType.ALL)
+    private List<PriljubljenIzdelek> priljubljeniIzdelki;
 
     public Integer getId() {
         return id;

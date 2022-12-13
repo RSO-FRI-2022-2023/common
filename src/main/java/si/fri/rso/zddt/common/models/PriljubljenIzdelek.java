@@ -17,8 +17,8 @@ import javax.persistence.*;
                 @NamedQuery(name = "PriljubljenIzdelek.getIzdelekId",
                         query = "SELECT i FROM PriljubljenIzdelek i WHERE i.izdelek = :izdelekId"),
                 //vrni izdelek - naziv
-//                @NamedQuery(name = "PriljubljenIzdelek.getByUser",
-//                        query = "SELECT i FROM PriljubljenIzdelek i WHERE i.uporabnik.id = :uporabnikId")
+                @NamedQuery(name = "PriljubljenIzdelek.getByUser",
+                        query = "SELECT i FROM PriljubljenIzdelek i WHERE i.uporabnik.id = :uporabnikId")
         })
 public class PriljubljenIzdelek {
 
@@ -31,9 +31,9 @@ public class PriljubljenIzdelek {
     @JoinColumn(name = "izdelek_id")
     private Izdelek izdelek;
 
-//    @ManyToOne
-//    @JoinColumn(name = "uporabnik_id")
-//    private Uporabnik uporabnik;
+    @ManyToOne
+    @JoinColumn(name = "uporabnik_id")
+    private Uporabnik uporabnik;
 
     public Integer getId() {
         return id;
@@ -51,11 +51,11 @@ public class PriljubljenIzdelek {
         this.izdelek = izdelek;
     }
 
-//    public Uporabnik getUporabnik() {
-//        return uporabnik;
-//    }
-//
-//    public void setUporabnik(Uporabnik uporabnik) {
-//        this.uporabnik = uporabnik;
-//    }
+    public Uporabnik getUporabnik() {
+        return uporabnik;
+    }
+
+    public void setUporabnik(Uporabnik uporabnik) {
+        this.uporabnik = uporabnik;
+    }
 }
