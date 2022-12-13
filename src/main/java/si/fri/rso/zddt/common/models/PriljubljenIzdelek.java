@@ -28,11 +28,11 @@ public class PriljubljenIzdelek {
     private Integer id;
 
     @OneToOne
-//    @JoinColumn(name = "izdelek_id")
+    @JoinColumn(name = "izdelek_id")
     private Izdelek izdelek;
 
     @OneToOne
-//    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id")
     private Uporabnik uporabnik;
 
     public Integer getId() {
