@@ -51,11 +51,11 @@ public class PriljubljenIzdelek {
         this.izdelek = izdelek;
     }
 
-    public Uporabnik getUporabnik() {
-        return uporabnik;
-    }
-
-    public void setUporabnik(Uporabnik uporabnik) {
-        this.uporabnik = uporabnik;
-    }
+//    public Uporabnik getUporabnik() {
+//        return uporabnik;
+//    }
+//
+//    public void setUporabnik(Uporabnik uporabnik) {
+//        this.uporabnik = uporabnik;
+//    }
 }
