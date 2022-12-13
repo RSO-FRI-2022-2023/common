@@ -2,8 +2,10 @@ package si.fri.rso.zddt.common.models;
 
 import lombok.ToString;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "uporabnik")
@@ -26,6 +28,10 @@ public class Uporabnik implements Serializable {
 
     private String firstname;
     private String lastname;
+
+    @JsonbTransient
+    @OneToMany(mappedBy = "uporabnik", cascade = CascadeType.ALL)
+    private List<PriljubljenIzdelek> priljubljeniIzdelki;
 
     public Integer getId() {
         return id;

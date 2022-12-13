@@ -27,11 +27,11 @@ public class PriljubljenIzdelek {
     @Column(name = "priljubljen_izdelek_id")
     private Integer id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "izdelek_id")
     private Izdelek izdelek;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "uporabnik_id")
     private Uporabnik uporabnik;
 
