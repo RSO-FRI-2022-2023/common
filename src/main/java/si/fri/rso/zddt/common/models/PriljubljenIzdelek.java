@@ -4,7 +4,7 @@ package si.fri.rso.zddt.common.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "priljubljeni")
+@Table(name = "priljubljenizdelek")
 @NamedQueries(value =
         {
                 //vrni vse izdelke
