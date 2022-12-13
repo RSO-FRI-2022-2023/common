@@ -31,9 +31,9 @@ public class PriljubljenIzdelek {
     @JoinColumn(name = "izdelek_id")
     private Izdelek izdelek;
 
-    @ManyToOne
-    @JoinColumn(name = "uporabnik_id")
-    private Uporabnik uporabnik;
+//    @ManyToOne
+//    @JoinColumn(name = "uporabnik_id")
+//    private Uporabnik uporabnik;
 
     public Integer getId() {
         return id;
