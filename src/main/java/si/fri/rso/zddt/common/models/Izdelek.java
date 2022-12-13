@@ -32,11 +32,11 @@ public class Izdelek implements Serializable {
     private String naziv;
     private String kategorija;
 
-    @JsonbTransient
+//    @JsonbTransient
     @OneToMany(mappedBy = "izdelek", cascade = CascadeType.ALL)
     private List<Cena> cene;
 
-    @JsonbTransient
+//    @JsonbTransient
     @OneToMany(mappedBy = "izdelek", cascade = CascadeType.ALL)
     private List<PriljubljenIzdelek> priljubljeniIzdelki;
 
