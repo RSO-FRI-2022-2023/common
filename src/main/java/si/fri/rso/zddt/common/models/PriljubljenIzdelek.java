@@ -32,7 +32,7 @@ public class PriljubljenIzdelek {
     private Izdelek izdelek;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "uporabnik_id")
     private Uporabnik uporabnik;
 
     public Integer getId() {
