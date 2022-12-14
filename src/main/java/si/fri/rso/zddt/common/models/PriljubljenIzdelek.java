@@ -13,7 +13,7 @@ import java.io.Serializable;
                         query = "SELECT i FROM PriljubljenIzdelek i"),
                 //vrni najbolj priljubljene izdelke
                 @NamedQuery(name = "PriljubljenIzdelek.getNajboljPriljubljene",
-                        query = "SELECT i.izdelek.id, i, count(i.id) FROM PriljubljenIzdelek i group by i.izdelek.id"),
+                        query = "SELECT i.id, i.izdelek.id, count(i.id) FROM PriljubljenIzdelek i group by i.izdelek.id"),
                 //vrni izdelek - id
                 @NamedQuery(name = "PriljubljenIzdelek.getById",
                         query = "SELECT i FROM PriljubljenIzdelek i WHERE i.id = :idPriljubljenIzdelek"),
