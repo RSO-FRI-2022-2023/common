@@ -11,6 +11,9 @@ import java.io.Serializable;
                 //vrni vse izdelke
                 @NamedQuery(name = "PriljubljenIzdelek.getAll",
                         query = "SELECT i FROM PriljubljenIzdelek i"),
+                //vrni najbolj priljubljene izdelke
+                @NamedQuery(name = "PriljubljenIzdelek.getNajboljPriljubljene",
+                        query = "SELECT i, count(i.izdelek.id) FROM PriljubljenIzdelek i group by i.izdelek.id"),
                 //vrni izdelek - id
                 @NamedQuery(name = "PriljubljenIzdelek.getById",
                         query = "SELECT i FROM PriljubljenIzdelek i WHERE i.id = :idPriljubljenIzdelek"),
