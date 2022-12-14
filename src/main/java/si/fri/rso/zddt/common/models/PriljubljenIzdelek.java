@@ -2,6 +2,7 @@ package si.fri.rso.zddt.common.models;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "priljubljenizdelek")
@@ -20,7 +21,7 @@ import javax.persistence.*;
                 @NamedQuery(name = "PriljubljenIzdelek.getByUser",
                         query = "SELECT i FROM PriljubljenIzdelek i WHERE i.uporabnik.id = :uporabnikId")
         })
-public class PriljubljenIzdelek {
+public class PriljubljenIzdelek implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

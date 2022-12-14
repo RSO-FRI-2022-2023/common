@@ -1,6 +1,7 @@
 package si.fri.rso.zddt.common.models;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "cena")
@@ -22,7 +23,7 @@ import javax.persistence.*;
                 @NamedQuery(name = "Cena.popust",
                 query="UPDATE Cena c SET c.discount = c.cena * :discount")
         })
-public class Cena {
+public class Cena implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cena_id")
