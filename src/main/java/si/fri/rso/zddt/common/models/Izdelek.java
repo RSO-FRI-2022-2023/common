@@ -36,11 +36,6 @@ public class Izdelek implements Serializable {
     @OneToMany(mappedBy = "izdelek", cascade = CascadeType.ALL)
     private List<Cena> cene;
 
-    @JsonbTransient
-    @OneToMany(mappedBy = "izdelek", cascade = CascadeType.ALL)
-    private List<PriljubljenIzdelek> priljubljeniIzdelki;
-
-
     public Integer getId() {
         return id;
     }
